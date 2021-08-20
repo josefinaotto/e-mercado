@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
 
         if (completado) {
-            window.location = 'inicio.html';  
+            window.location = 'https://josefinaotto.github.io/e-mercado/inicio';  
         
         } else {
             alert("Debes ingresar los datos")
