@@ -143,3 +143,7 @@ a.custom-card:hover {
 #listado {
   text-align: center;
 }
+
+small {
+  color: gray;
+}
