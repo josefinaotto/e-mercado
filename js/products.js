@@ -1,20 +1,8 @@
 var productosArray = [];
 
 function mostrarProductos(array) {
-   /* 
-    let contenido = "<br><hr><br>";
-    for (let i = 0; i < array.length; i++) {
-        let producto = array[i]; 
 
-        contenido += "Nombre: " + producto.name + "<br>"; 
-        contenido += "Breve descripción: " + producto.description + "<br>"; 
-        contenido += "Precio: " + producto.cost + "<br>"; 
-        contenido += "<br><hr><br>"
-    }
-    document.getElementById("listado").innerHTML = contenido; 
-    */
-
-    let contenido = "<hr><br>";
+    let contenido = "<hr> <br>";
     for (let i = 0; i < array.length; i++) {
         let producto = array[i]; 
         contenido += `
