@@ -7,7 +7,7 @@ function mostrarProductos(array) {
         let producto = array[i]; 
         contenido += `
             <div>
-                <div class="mb-1">
+                <div>
                     <h4>`+ producto.name +`</h4> 
                     <p> `+ producto.description +`</p> 
                 </div>
