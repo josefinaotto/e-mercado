@@ -14,7 +14,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <style>
-    html, body{
+    html, body {
       height: 100%;
     }
 
@@ -36,7 +36,7 @@
       margin: auto;
     }
 
-    input[type=submit] {
+    input[type=button] {
       background-color: royalblue;
       color: white;
       border: none;
@@ -50,19 +50,16 @@
   <h1>Iniciar sesión</h1>
   <br> <br> 
   
-
-  <form>
-
-    <input type="email" name="mail" id="mail" placeholder="Correo electrónico" size="50"  required>
-    <br> <br><br>
-
-
-    <input type="password" name="contra" id="contra" placeholder="Contraseña" size="50" required>
+   <div id="ingreso">
+    <input type="email" name="mail" id="mail" placeholder="Correo electrónico" size="50">
     <br><br><br>
 
-    <input type="submit" value="Ingresar">
 
-  </form>
+    <input type="password" name="contra" id="contra" placeholder="Contraseña" size="50">
+    <br><br><br>
+
+    <input type="button" value="Ingresar" id="botoningreso">
+  </div>
 
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
