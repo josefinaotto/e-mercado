@@ -6,14 +6,12 @@ function mostrarProductos(array) {
     for (let i = 0; i < array.length; i++) {
         let producto = array[i]; 
         contenido += `
-            <div>
-                <div>
-                    <h4>`+ producto.name +`</h4> 
-                    <p> `+ producto.description +`</p> 
-                </div>
-                <small class="text-muted"> Precio: $`  + producto.cost + ` </small>  
-            </div>
-            <br> <hr> <br> `
+
+                <h4>`+ producto.name +`</h4> 
+                <p> `+ producto.description +`</p> 
+                <small> Precio: $`  + producto.cost + ` </small>  
+  
+            <br> <br> <hr> <br> `
         }
         document.getElementById("listado").innerHTML = contenido;
 
