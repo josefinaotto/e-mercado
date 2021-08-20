@@ -19,16 +19,11 @@ function mostrarProductos(array) {
         let producto = array[i]; 
         contenido += `
             <div>
-                <div>
-                    <div>
-                        <div class="mb-1">
-                        <h4>`+ producto.name +`</h4> 
-                        <p> `+ producto.description +`</p> 
-                        </div>
-                        <small class="text-muted"> Precio: $`  + producto.cost + ` </small> 
-                    </div>
-
+                <div class="mb-1">
+                    <h4>`+ producto.name +`</h4> 
+                    <p> `+ producto.description +`</p> 
                 </div>
+                <small class="text-muted"> Precio: $`  + producto.cost + ` </small>  
             </div>
             <br> <hr> <br> `
         }
@@ -48,10 +43,3 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 });
 
-
-
-/* Que significa lo que hace la funcion:
-Abre una url que tiene un json -> un objeto
-Con getJSONData se pasan los datos del json a una lista en html con el fetch
-response.json() agarra un json y devuelve un objeto d js 
-ir recorriendo el json e ir agregando cada elemento en una lista? */
