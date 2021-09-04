@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         let emailIngresado = document.getElementById("mail");
         let contraIngresada = document.getElementById("contra");
         let completado = true; 
+        
 
         if (emailIngresado.value === '') {
             completado = false; 
@@ -24,8 +25,13 @@ document.addEventListener("DOMContentLoaded", function(e){
             contraIngresada.classList.remove("invalid");
         }
 
+
         if (completado) {
-            window.location = 'https://josefinaotto.github.io/e-mercado/inicio';  
+            localStorage.clear();
+            localStorage.setItem("user", emailIngresado.value); //ese value esta en string
+            localStorage.setItem("completado", completado); //??
+            //window.location = 'https://josefinaotto.github.io/e-mercado/inicio'; 
+            window.location = 'inicio.html';
         
         } else {
             alert("Debes ingresar los datos")
@@ -35,3 +41,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
 });
+
+
+
+//let showUser= localStorage.setItem("emailUs",JSON.stringify(datosUsuario));
