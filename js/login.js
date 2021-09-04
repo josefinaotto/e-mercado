@@ -1,3 +1,5 @@
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -30,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             localStorage.clear();
             localStorage.setItem("user", emailIngresado.value); //ese value esta en string
             localStorage.setItem("completado", completado); //??
-            //window.location = 'https://josefinaotto.github.io/e-mercado/inicio'; 
             window.location = 'inicio.html';
         
         } else {
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
 });
+
 
 
 
