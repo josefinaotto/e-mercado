@@ -40,7 +40,8 @@ function mostrarProductos(array) {
 
                 <h4>`+ producto.name + `</h4> 
                 <p> `+ producto.description + `</p> 
-                <small> Precio: $`  + producto.cost + ` </small>  
+                <small> Precio: $`  + producto.cost + ` </small> <br> <br>
+                <button id="irAlProducto"; onclick="window.location.href='file:///Users/josefina.ottonello/Documents/GitHub/e-mercado/product-info.html';"> Ir al Producto </button>
   
             <br> <br> <hr> <br> `
         }
