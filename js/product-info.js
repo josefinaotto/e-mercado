@@ -32,20 +32,6 @@ function mostrarProducto(array) {
 }
 
 
-/*
-function cantEstrellasLLenas(valor) {
-    for (let i = 1; i <= valor; i++) {
-        <span class="fa fa-star checked"></span>
-    }
-}
-
-
-function cantEstrellasVacias(valor) {
-    for (let i = 1; i <= valor; i++) {
-        <span class="fa fa-star"></span>
-    }
-} */
-
 
 function mostrarComentarios(array) {
 
@@ -69,10 +55,6 @@ function mostrarComentarios(array) {
 
 }
 
-//Para poner las estrellas hacer un for del largo de producto.score con las llenas y 5-score con las vacias
-
-
-//for (let i = 1; i <= puntos; i++) 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 
