@@ -59,12 +59,6 @@ function mostrarRelacionados(arr1, arr2) {
 }
 
 
-/* arr1 = productosArray //listado de autos
-arr2 = auto  //listado d caracteristicas d chevrolet onix
-relacionados = auto.relatedProducts //listado de numeros de indices de autos relacionados
-                                    //es el arreglo que hay que recorrer */
-
-
 function mostrarComentarios(array) {
     let contenido = "<br>";
     for (let i = 0; i < array.length; i++) {
