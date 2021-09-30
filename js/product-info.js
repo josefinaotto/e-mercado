@@ -15,35 +15,28 @@ function mostrarProducto(array) {
                 <small> Vendidos: `  + producto.soldCount + ` </small> <br>
                 <small> Categoría: `  + producto.category + ` </small> 
                 
-  
             <br> <br> <br> `
 
     imagenes += `
-         <img src="img/prod1.jpg" width= "200" height="150" alt="">
-         <img src="img/prod1_1.jpg" width= "200" height="150" alt="">
-         <img src="img/prod1_2.jpg" width= "200" height="150" alt="">
-         <img src="img/prod1_3.jpg" width= "200" height="150" alt="">
-         <img src="img/prod1_4.jpg" width= "200" height="150" alt="">
 
+         <img src="img/prod1.jpg" width= "200" height="150">
+         <img src="img/prod1_1.jpg" width= "200" height="150">
+         <img src="img/prod1_2.jpg" width= "200" height="150">
+         <img src="img/prod1_3.jpg" width= "200" height="150">
+         <img src="img/prod1_4.jpg" width= "200" height="150">
+
+         
     `;
 
     document.getElementById("listadoProducto").innerHTML = contenido;
     document.getElementById("imgs").innerHTML = imagenes;
 }
 
-/*
-function mostrarRelacionados(arr1, arr2) {
-    let relacionados = arr2.relatedProducts;
-    for (let i = 0; i < relacionados.length; i++) {
-        document.getElementById("related").innerHTML += arr1[relacionados[i]].name + "<br>";
-    }
-} */
 
 function mostrarRelacionados(arr1, arr2) {
     let relacionados = arr2.relatedProducts;
     let contenido = "<br>";
     for (let i = 0; i < relacionados.length; i++) {
-
         contenido += ` 
         <div class="card" style="width: 18rem;"> 
                 <div class="card-body">
