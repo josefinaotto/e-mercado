@@ -76,6 +76,7 @@ function mostrarComentarios(array) {
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
 document.addEventListener("DOMContentLoaded", function (e) {
 
     getJSONData(PRODUCT_INFO_URL).then(function (resultado) {
@@ -83,6 +84,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
             auto = resultado.data;
             mostrarProducto(auto);
         }
+
+
+        getJSONData(PRODUCTS_URL).then(function (resultado) {
+            if (resultado.status === "ok") {
+                productosArray = resultado.data;
+                mostrarRelacionados(productosArray, auto);
+            }
+        });
+
+
     });
 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultado) {
@@ -92,12 +103,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
     });
 
-    getJSONData(PRODUCTS_URL).then(function (resultado) {
-        if (resultado.status === "ok") {
-            productosArray = resultado.data;
-            mostrarRelacionados(productosArray, auto);
-        }
-    });
 
 
 });
