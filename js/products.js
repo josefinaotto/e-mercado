@@ -41,7 +41,8 @@ function mostrarProductos(array) {
                 <h4>`+ producto.name + `</h4> 
                 <p> `+ producto.description + `</p> 
                 <small> Precio: $`  + producto.cost + ` </small> <br> <br>
-                <button id="irAlProducto"; onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';"> Ir al Producto </button>
+                
+                <button type="button" id="irAlProducto" class="btn btn-light" onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';">Ir producto</button>
   
             <br> <br> <hr> <br> `
         }
@@ -49,7 +50,7 @@ function mostrarProductos(array) {
         document.getElementById("listado").innerHTML = contenido;
     }
 }
-
+// boton viejo: <button id="irAlProducto"; onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';"> Ir al Producto </button>
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
