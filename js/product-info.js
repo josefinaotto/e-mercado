@@ -25,7 +25,6 @@ function mostrarProducto(array) {
          <img src="img/prod1_3.jpg" width= "200" height="150">
          <img src="img/prod1_4.jpg" width= "200" height="150">
 
-         
     `;
 
     document.getElementById("listadoProducto").innerHTML = contenido;
