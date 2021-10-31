@@ -56,26 +56,7 @@ function mostrarProductos(array) {
 }
 
 
-
-/* <img class="card-img-top" src="`+ producto.imgScr +`">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="...">
-  <div class="card-body">
-    <h5 class="card-title">`+ producto.name + `</h5>
-    <p class="card-text">`+ producto.description + `</p>
-    <a href="https://josefinaotto.github.io/e-mercado/product-info.html" class="btn btn-light">Ir al producto</a>
-  </div>
-</div>
-
-
- contenido += `
-                <h4>`+ producto.name + `</h4> 
-                <p> `+ producto.description + `</p> 
-                <small> Precio: $`  + producto.cost + ` </small> <br> <br>
-                <button type="button" id="irAlProducto" class="btn btn-light" onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';">Ir producto</button>
-            <br> <br> <hr> <br> `
-*/
-
+//--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
