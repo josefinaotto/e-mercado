@@ -36,7 +36,25 @@ function mostrarProductos(array) {
 
         if (((minPrecio == undefined) || (minPrecio != undefined && parseInt(producto.cost) >= minPrecio)) &&
             ((maxPrecio == undefined) || (maxPrecio != undefined && parseInt(producto.cost) <= maxPrecio))) {
+           
+
             contenido += `
+            <div class="col-12 col-sm-6 col-md-3 card" style="width: 18rem;">
+              <img src=" `+ producto.imgSrc + `" class="img-thumbnail">
+              <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">`+ producto.name + `</h5>
+                <p class="card-text">`+ producto.description + `</p>
+                <small class="card-text"> Precio: $`  + producto.cost + ` </small> <br> <br>
+                <a href="https://josefinaotto.github.io/e-mercado/product-info.html" class="btn btn-light">Ir al producto</a>
+              </div>
+            </div>
+            `
+        }
+
+        document.getElementById("listado").innerHTML = contenido;
+    }
+}
+
 
 
 /* <img class="card-img-top" src="`+ producto.imgScr +`">
@@ -54,16 +72,10 @@ function mostrarProductos(array) {
                 <h4>`+ producto.name + `</h4> 
                 <p> `+ producto.description + `</p> 
                 <small> Precio: $`  + producto.cost + ` </small> <br> <br>
-                
                 <button type="button" id="irAlProducto" class="btn btn-light" onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';">Ir producto</button>
-  
             <br> <br> <hr> <br> `
-        }
+*/
 
-        document.getElementById("listado").innerHTML = contenido;
-    }
-}
-// boton viejo: <button id="irAlProducto"; onclick="window.location.href='https://josefinaotto.github.io/e-mercado/product-info.html';"> Ir al Producto </button>
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
