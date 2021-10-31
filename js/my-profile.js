@@ -1,5 +1,5 @@
 
-function infoUsuario() {
+function guardarInfo() {
     let edadIngresada = document.getElementById("age");
     let nombreIngresado = document.getElementById("name");
     let telefonoIngresado = document.getElementById("numero");
@@ -12,8 +12,8 @@ function infoUsuario() {
 }
 
 
-
 //-----------------------------------------------------------------------------------------------------------
+
 document.addEventListener("DOMContentLoaded", function (e) {
 
     let ageUsuario = document.getElementById("mostrarEdad");
