@@ -56,26 +56,8 @@
     </div>
   </nav>
 
-  <!-- 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div> -->
 
-
-
-  <!-- Modal para ingresar los datos? 
-    en vez de placeholder, value? 
-    cada dato con un id 
-    al final un boton de guardar datos con un onclick 
-    un funcion en my-profile.js que guarde los datos que estan en init 
-  -->
-
-
+  
   <br> <br>
 
   <h2 style="text-align: center;"> Mi perfil </h2>
@@ -92,8 +74,6 @@
     <p><strong>Edad </strong> </p>
     <p id="mostrarEdad"> </p>
 
-
-
     <p> <strong>Teléfono de contacto </strong> </p>
     <p id="mostrarTelefono"> </p>
 
@@ -104,7 +84,10 @@
 
   </div>
 
+
   <br> <br> <br> <br> <br>
+
+
 
 
   <!-- Modal -->
@@ -125,16 +108,17 @@
           <input type="text" name="age" id="age" size="5" class="mb-2">
 
           <p> <strong>Teléfono de contacto </strong> </p>
-          <input type="text" class="mb-2" name="numero" id="numero">
+          <input type="text" name="numero" id="numero" class="mb-2">
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" onclick="infoUsuario()">Guardar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarInfo()">Guardar</button>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <footer class="text-muted bg-light">
