@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (completado) {
             localStorage.clear();
             localStorage.setItem("user", emailIngresado.value); //ese value esta en string
-            localStorage.setItem("completado", completado); //??
+            localStorage.setItem("completado", completado); 
             window.location = 'inicio.html';
         
         } else {
