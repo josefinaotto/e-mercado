@@ -38,6 +38,7 @@ function mostrarRelacionados(arr1, arr2) {
     for (let i = 0; i < relacionados.length; i++) {
         contenido += ` 
         <div class="card" style="width: 18rem;"> 
+                <img src=" `+ arr1[relacionados[i]].imgSrc + `" class="img-thumbnail">
                 <div class="card-body">
                     <h5 class="card-title">` + arr1[relacionados[i]].name + `</h5>
                     <p class="card-text">` + arr1[relacionados[i]].description + `</p>
