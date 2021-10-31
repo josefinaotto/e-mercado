@@ -14,7 +14,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       height: 100%;
     }
 
@@ -25,7 +26,6 @@
       align-items: center;
       padding-top: 40px;
       padding-bottom: 40px;
-      background-color: #f5f5f5;
       text-align: center;
     }
 
@@ -37,31 +37,33 @@
     }
 
     input[type=button] {
-      background-color: royalblue;
+      background-color: black;
       color: white;
       border: none;
       padding: 14px 26px;
     }
-
   </style>
 </head>
 
+<br>
+<h1>Iniciar sesión</h1>
+<h5>E-mercado</h5>
+<br> <br>
+
+<div id="ingreso" class="container p-5 border bg-light text-center">
   <br>
-  <h1>Iniciar sesión</h1>
-  <br> <br> 
-  
-   <div id="ingreso">
-    <input type="email" name="mail" id="mail" placeholder="Correo electrónico" size="50">
-    <br><br><br>
 
+  <input type="email" name="mail" id="mail" placeholder="Correo electrónico" size="50">
+  <br><br>
 
-    <input type="password" name="contra" id="contra" placeholder="Contraseña" size="50">
-    <br><br><br>
+  <input type="password" name="contra" id="contra" placeholder="Contraseña" size="50">
+  <br><br><br><br> <br>
 
-    <input type="button" value="Ingresar" id="botoningreso">
-  </div>
+  <input type="button" value="Guardar datos" id="botoningreso" style="border-radius: 25px; width: 250px;">
+</div>
 
-  <script src="js/init.js"></script>
-  <script src="js/login.js"></script>
+<script src="js/init.js"></script>
+<script src="js/login.js"></script>
 </body>
+
 </html>
