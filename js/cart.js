@@ -38,9 +38,15 @@ function mostrarTodo(array) {
                   <p> Precio unitario `  + producto.unitCost + producto.currency + ` </p> <br> <br>
                 </div>
                 <div class="col-3">
+                <div class="row">
                   <p> Cantidad </p>
                   <input type="number" onchange="calcularSubtotal(${producto.unitCost}, ${i})" class="form-control" 
                         id="quantity${i}" required="" value="${producto.count}" min="0"> </p> <br>
+                </div>  <br>
+                <div class="row"> 
+                    <h5>Precio total $</h5> 
+                    <h5 class="subtotal" id="artSubtotal">${sub} </h5> 
+                </div>
                 </div>
             </div>
             <div class="row">
@@ -48,38 +54,58 @@ function mostrarTodo(array) {
             </div>
             <div class="container border bg-light py-4 px-5">
                     <div class="row">
-                       <h6>Resumen de compra</h6> 
+                       <h6> <strong> Resumen de compra </strong> </h6> 
                     </div>
                     <br>
-                    <div class="row"> 
-                       <h4>Subtotal $</h4> 
-                       <h4 class="subtotal" id="artSubtotal">${sub} </h4> 
-                    </div>
-                    <br> <hr> <br>
                     <div class="row">
-                       <p><small> Tipo de envío </small></p> <br> <br>
+                       <p> Tipo de envío </p> <br> <br>
                     </div>
                     <div class="row">
                        <select class="custom-select d-block w-100" id="categoriaProducto">
                           <option value=""> Elija el tipo de envío...</option>
-                          <option> Premium (2-5 días) </option>
-                          <option> Express (5-8 días) </option>
-                          <option> Standard (12-15 días) </option>
+                          <option> Premium 2-5 días (15%) </option>
+                          <option> Express 5-8 días (7%) </option>
+                          <option> Standard 12-15 días (5%) </option>
                         </select>
                         <br>
                     </div>
                     <br> <br>
                     <div class="row">
-                       <h4> <strong> Total $$ </strong> </h4>
+                    <p> Dirección de envío </p>
+                    </div>
+                    <form>
+                    <div class="form-group">
+                      <label for="inputAddress2">Departamento</label>
+                      <input type="text" class="form-control" id="inputAddress2">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-10">
+                        <label for="inputEmail4">Calle</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                      </div>
+                      <div class="form-group col">
+                        <label for="inputPassword4">Número</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Esquina</label>
+                      <input type="text" class="form-control" id="inputAddress">
+                    </div>
+                    </form>
+                    <br> <hr> <br>
+                    <div class="row">
+                       <h4> <strong> Total $$ </strong> </h4> <br>
                     </div>
                     <br>
                     <div class="row">
-                       <p> <small> Forma de pago </small> </p>
+                       <p> Forma de pago </p>
                     </div>
                     <input id="tarjeta" name="pago" type="radio" value="1" checked="" required="">
                     <label for="tarjeta"> Tarjeta de crédito </label> <br>
                     <input id="transferencia" name="pago" type="radio" value="2" required="">
-                    <label for="transferencia"> Transferencia bancaria </label> <br> <br>
+                    <label for="transferencia"> Transferencia bancaria </label> 
+                    <br> <br> <br>
                     <button class="btn btn-primary btn-block">Continuar con el pago</button>
             </div>
         </div>
