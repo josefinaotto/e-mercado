@@ -40,6 +40,84 @@ var getJSONData = function (url) {
     });
 }
 
+
+function validarDatos() {
+  let valor = true; //va a guardar si es valido mandarlo o no
+  let mensaje = "";
+
+  //var select = document.getElementById('tipoEnvioElegido');
+  //var option = select.options[select.selectedIndex];
+  //let opcionEnvio = option.value; //guarda la opcion seleccionada de envio 
+  //let direccion = document.getElementsByClassName("infoDir"); //array con las informaciones de la direccion
+  let pagoTarjeta = document.getElementsByClassName("infoPagoTarj"); //array con las informaciones de la tarjeta
+
+  //let formaPago = document.getElementsByClassName("infoPago");
+  document.getElementById("feedback").innerHTML = "";
+
+  /*
+    //verificando direccion
+    let camposVacios = 0;
+    for (let i = 0; i < direccion.length; i++) {
+      const datos = direccion[i];
+      if (datos == "") { //o datos.value
+        camposVacios += 1;
+      }
+    }
+    if (camposVacios > 0) {
+      valor = false;
+      mensaje += "Debe ingresar toda la información de la dirección de envío <br>"
+    }
+  
+    //verificando seleccion de tipo de envio 
+    if (opcionEnvio == "") { //es la opcion del titulo
+      valor = false;
+      mensaje += "Debe seleccionar un tipo de envío <br>"
+    } */
+
+
+  //verificando datos del modal i.e. forma de pago 
+  /*
+  var metodos = document.getElementsByName('pago');
+  for (i = 0; i < metodos.length; i++) {
+    if (metodos[i].checked)
+      //metodoSeleccionado = metodos[i].value; //guarda el elegido 
+      metodoSeleccionado = i;
+  } */
+  var metodoSeleccionado;
+  var tarj = document.getElementById("tarjeta");
+  //var transf = document.getElementById("transferencia");
+  if (tarj.checked) 
+    metodoSeleccionado = 0;
+  else
+    metodoSeleccionado = 1;
+
+  /* if (metodoSeleccionado == 0) {
+    valor = false;
+    mensaje += "Debe completar los datos de la forma de pago"
+  } Como predeterminado se elige la 1, nunca es cero */
+
+  if (metodoSeleccionado === 0) { //i.e. eligio tarjeta 
+    camposVacios = 0;
+    for (let i = 0; i < pagoTarjeta.length; i++) {
+      const informacion = pagoTarjeta[i];
+      if (informacion.value == "") {  //o informacion.value
+        camposVacios += 1;
+      }
+    }
+    if (camposVacios > 0) {
+      valor = false;
+      mensaje += "Debe ingresar toda la información de la tarjeta <br>"
+    }
+  } 
+
+  document.getElementsByName("feedback").innerHTML = mensaje;
+  return valor;
+
+} //cierra la funcion validarDatos
+
+
+
+
 //-------------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function (e) {
@@ -48,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   let emailUsuario = document.getElementById("mostrarEmail");
 
   let nombreUsuario = localStorage.getItem("user");
-  
+
   idUsuario.innerHTML = nombreUsuario;
   emailUsuario.innerHTML = nombreUsuario;
 
@@ -56,6 +134,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
   document.getElementById("cerrarSesion").addEventListener("click", function () {
 
     localStorage.clear();
+
+  });
+
+
+  let form = document.getElementById("modalFormaPago");
+  form.addEventListener('submit', function (event) {
+    if (!validarDatos()) {
+      event.preventDefault()
+      event.stopPropagation()
+    } else {
+      document.getElementById("feedback").innerHTML = "";
+    }
 
   });
 
