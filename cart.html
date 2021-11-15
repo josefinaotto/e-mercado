@@ -61,29 +61,165 @@
   <div class="text-center p-3">
     <h2> Mi carrito de compras</h2>
   </div>
-
   <br>
-
   <div class="container">
-    <div class="col p-3" id="carritoDesplegado">
+    <div id="carritoDesplegado">
     </div>
+  </div>
+  <br>
+  <div class="container border bg-light py-4 px-5">
+    <div class="row">
+      <h6> <strong> Resumen de compra </strong> </h6>
+    </div> <br>
+    <div class="row">
+      <p> Tipo de envío </p> <br> <br>
+    </div>
+    <div class="row">
+      <select class="custom-select d-block w-100 form-control" id="tipoEnvioElegido" onchange="calcularEnvio()">
+        <!-- era id categoria producto -->
+        <option value="" disabled selected> Elija el tipo de envío...</option>
+        <option value="15"> Premium 2-5 días (15%) </option>
+        <option value="7"> Express 5-8 días (7%) </option>
+        <option value="5"> Standard 12-15 días (5%) </option>
+      </select> <br>
+    </div> <br> <br>
+    <div class="row">
+      <p> Dirección de envío </p>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="inputAddress2">Departamento</label>
+        <input type="text" class="form-control infoDir" id="inputAddress2">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-10">
+          <label for="inputEmail4">Calle</label>
+          <input type="text" class="form-control infoDir" id="inputEmail4">
+        </div>
+        <div class="form-group col">
+          <label for="inputPassword4">Número</label>
+          <input type="text" class="form-control infoDir" id="inputPassword4">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Esquina</label>
+        <input type="text" class="form-control infoDir" id="inputAddress">
+      </div>
+    </form> <br>
+    <hr> <br>
+    <h4> <strong> Costos </strong> </h4> <br>
+    <div class="container border py-4 px-4 rounded" style="background-color: white;">
+
+      <div class="row">
+        <div class="col-10">
+          <h5> Subtotal </h5>
+        </div>
+        <div class="col" id="precioSub">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-10">
+          <h5> Costo de envío </h5>
+        </div>
+        <div class="col" id="precioEnvio">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-10">
+          <h5> Total </h5>
+        </div>
+        <div class="col" id="precioTotal" style="font-weight: bold; font-size: large;">
+        </div>
+      </div>
+
+    </div>
+    <br> <br> <br> <br>
+    <div class="row">
+      <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#prueba">
+        Elegir forma de pago
+      </button>
+    </div> <br> <br>
+    <div class="row" id="feedback" style="color: red;">
+    </div>
+  </div>
+
+  <br> <br> <br>
 
 
 
+  <div class="modal" tabindex="-1" id="prueba">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Forma de pago</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="modalFormaPago" novalidate>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input infoPago" type="radio" name="pago" id="tarjeta" value="0" checked
+                onclick="habilitarFormulario()">
+              <label class="form-check-label" for="tarjeta"> Tarjeta de crédito </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input infoPago" type="radio" name="pago" id="transferencia" value="1"
+                onclick="deshabilitarFormulario()">
+              <label class="form-check-label" for="transferencia"> Transferencia bancaria </label>
+            </div>
+            <br> <br>
 
-    <div id="spinner-wrapper">
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+            <div class="form-row">
+              <div class="form-group col-10">
+                <label for="inputTarjeta">Número de tarjeta</label>
+                <input type="text" class="form-control infoPagoTarj" id="inputTarjeta">
+              </div>
+              <div class="form-group col">
+                <label for="inputCVV">cvv</label>
+                <input type="text" class="form-control infoPagoTarj" id="inputCVV">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputVence">Vencimiento (MM/AA) </label>
+              <input type="text" class="form-control infoPagoTarj" id="inputVence">
+            </div>
+            <br> <br>
+            <button type="submit" class="btn btn-primary btn-block"> Proceder con el
+              pago</button>
+            <br>
+          </form>
+        </div>
       </div>
     </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/cart.js"></script>
+  </div>
+
+ 
+
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+<!--  <button type="submit" class="btn btn-primary btn-block" onclick="validarDatos()"> Proceder con el
+              pago</button> -->
