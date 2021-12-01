@@ -161,17 +161,16 @@
         <div class="modal-body">
           <form id="modalFormaPago" novalidate>
             <div class="form-check form-check-inline">
-              <input class="form-check-input infoPago" type="radio" name="pago" id="tarjeta" value="0" checked
-                onclick="habilitarFormulario()">
+              <input class="form-check-input infoPago" type="radio" name="pago" id="tarjeta" value="0" 
+                onclick="habilitarFormularioTarj()">
               <label class="form-check-label" for="tarjeta"> Tarjeta de crédito </label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input infoPago" type="radio" name="pago" id="transferencia" value="1"
-                onclick="deshabilitarFormulario()">
+                onclick="deshabilitarFormularioTarj()">
               <label class="form-check-label" for="transferencia"> Transferencia bancaria </label>
             </div>
-            <br> <br>
-
+            <br> <br> <hr> <br>
             <div class="form-row">
               <div class="form-group col-10">
                 <label for="inputTarjeta">Número de tarjeta</label>
@@ -182,9 +181,14 @@
                 <input type="text" class="form-control infoPagoTarj" id="inputCVV">
               </div>
             </div>
+          
             <div class="form-group">
               <label for="inputVence">Vencimiento (MM/AA) </label>
               <input type="text" class="form-control infoPagoTarj" id="inputVence">
+            </div> <br> <hr> <br>
+            <div class="form-group">
+              <label for="inputTransf"> Número de cuenta </label>
+              <input type="text" class="form-control infoPagoTarj" id="inputTransf">
             </div>
             <br> <br>
             <button type="submit" class="btn btn-primary btn-block"> Proceder con el
